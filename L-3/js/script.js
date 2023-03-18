@@ -84,6 +84,8 @@ console.log(typeof NaN); // number
 let result = ("b" + "a" + +"c").toLowerCase();
 console.log(result); // banan
 
+console.log(typeof +"c"); // number
+
 // конкантинация преобразовали в плюс
 let res = +"c";
 console.log(res); // NaN
