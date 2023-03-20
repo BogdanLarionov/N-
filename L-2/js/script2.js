@@ -14,6 +14,14 @@ console.log(arr["4"]); // 5
 let long_string = "lLorem ipsum dolor sit, lLorem ipsum dolor sit";
 let index = long_string.length - 1; // индекс последнего массива
 console.log(long_string[index]); // t
+
+
+// ------------------------------------------------------------------------------------------
+let long_string = "lLorem ipsum dolor sit, lLorem ipsum dolor sit";
+console.log(long_string[long_string.length - 1]); // t
+let index = long_string.length - 1;
+console.log(long_string[index]);  // t
+// ------------------------------------------------------------------------------------------
 //МЕТОДЫ
 
 let str = "hello world";

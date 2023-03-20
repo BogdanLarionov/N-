@@ -73,14 +73,18 @@ console.log(typeof +val_2); // number
 // склеело строки
 console.log(val_2 + 3); // 123
 // преобразовали строку в цифру
-console.log(+val_2 + 3); // 123
-console.log(typeof +val_2 + 3); // number 123
+console.log(+val_2 + 3); // 15
+console.log(typeof +val_2 + 3); // number3
+console.log(typeof +val_2 + ' ' + 3); // number 3
+
 // --------------------------------------------
 // NaN - number
 console.log(typeof NaN); // number
 
 let result = ("b" + "a" + +"c").toLowerCase();
 console.log(result); // banan
+
+console.log(typeof +"c"); // number
 
 // конкантинация преобразовали в плюс
 let res = +"c";

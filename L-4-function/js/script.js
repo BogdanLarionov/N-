@@ -20,11 +20,11 @@ console.log(typeof random); // string
 console.log(typeof +random); // number
 console.log(+random); // 0.1
 if (random > 0.5) {
-  console.log("Победа");
+  console.log(`Победа: ${random}`);
 } else if (random < 0.5) {
-  console.log("Поражение");
+  console.log(`Поражение: ${random}`);
 } else {
-  console.log("Ничья");
+  console.log(`Ничья ${random}`);
 }
 // ---------------
 // Math.random();
