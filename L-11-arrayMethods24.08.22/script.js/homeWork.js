@@ -26,6 +26,11 @@ array.forEach((element) => {
 console.log(array); // [ 200, 45, 65, 670, 352, 32,  1,  0,   7 ]
 console.log(new_arr); // [ 45, 65, 32, 1, 0, 7 ]
 
+// метод .filter()
+let array = [200, 45, 65, 670, 352, 32, 1, 0, 7];
+let new_array = array.filter((element) => element < 100);
+console.log(new_array); // [ 45, 65, 32, 1, 0, 7 ]
+
 // Сформируйте новый массив с числами, которые кратны 2(кратны - делится на 2). Предложите два способа решения (цикл for и метод .forEach).
 
 // цикл for
@@ -50,6 +55,15 @@ array.forEach((element) => {
 });
 console.log(newArr); // [ 200, 670, 352, 32  ]
 
+// метод .filter()
+
+let array = [200, 45, 65, 670, 352, 32, 1, 0, 7];
+let newArr = array.filter((element) => {
+  return element % 2 === 0 && element !== 0;
+});
+// let newArr = array.filter((element) => element % 2 === 0 && element !== 0);
+console.log(newArr); // [ 200, 670, 352, 32 ]
+
 // Сформируйте новый массив с числами, которые заканчиваются на 5. Предложите два способа решения (цикл for и метод .forEach).
 
 // цикл for
@@ -71,6 +85,11 @@ array.forEach((element) => {
   }
 });
 console.log(newArr); // [45, 65, 5];
+
+// метод .filter()
+let array = [200, 45, 65, 670, 352, 32, 1, 0, 7, 5];
+let newArray = array.filter((elem) => elem % 10 === 5);
+console.log(newArray); // [45, 65, 5];
 
 // Сформируйте массив, в котором числа больше 100 заменены на строку '>100', а числа меньше ста - на '<100'. Предложите два способа решения (цикл for и метод .forEach).
 
@@ -100,3 +119,13 @@ array.forEach((element) => {
 });
 
 console.log(newArray); // [  '>100', '<100','<100', '>100','>100', '<100','<100', '<100','<100', '<100']
+// method map()
+let array = [200, 45, 65, 670, 352, 32, 1, 0, 7, 5];
+let newArr = array.map((elem) => {
+  if (elem > 100) {
+    return ">100";
+  } else {
+    return "<100";
+  }
+});
+console.log(newArr); // [">100","<100","<100",">100",">100","<100","<100","<100","<100","<100",];
