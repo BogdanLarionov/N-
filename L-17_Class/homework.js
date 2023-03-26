@@ -36,6 +36,8 @@ const people = [
 
 //1. Сформируйте массив строк - каждая строка включает в себя информацию по каждому человеку в следующем формате: "<Имя> <Фамилия> (<Город>, <Страна>)". Пример => ['Ivan Ivanov (Moscow, Russia)', {...}, {...}, ...]
 
+// map() - работает с элементами массива (object - это элемент массива)!
+
 let new_arr = people.map(
   (elem) =>
     `${elem.first_name} ${elem.last_name} (${elem.city}, ${elem.country})`
@@ -45,11 +47,13 @@ console.log(new_arr);
 // 2. Сформируйте массив из активных людей
 
 let newArr = people.filter((elem) => elem.active === true);
-let new_Arr = people.filter((elem) => elem.active); // короткий способ
+let new_Arr = people.filter((elem) => elem.active); // короткий способ (лежит буливое значение. по умолчанию, возврощает true!)
 console.log(newArr); //  Сформирован массив из активных людей!
 console.log(new_Arr); //  Сформирован массив из активных людей!
 
 //3. Сформируйте массив из людей, чьи имена начинаются на 'D' (регистр буквы может быть и нижним)
+
+// startsWith()  - method
 
 let arr_name_d = people.filter(
   (elem) => elem.first_name[0] === "D" || elem.first_name[0] === "d"
@@ -64,7 +68,10 @@ console.log(arr_name_D); // второй метод
 //4. Получите из массива объект, где страной проживания человека является 'Germany'
 
 let getCountry = people.find((elem) => elem.country === "Germany");
-console.log(getCountry); // country: 'Germany',
+console.log(getCountry); // country: 'Germany', вернется  {...}   обьект!
+
+let getCountry = people.filter((elem) => elem.country === "Germany");
+console.log(getCountry); // country: 'Germany', вернется [ {...} ] массив с обьектом!
 
 // 5. Сформируйте массив из совершеннолетних пользователей. И выведите в консоль результат в формате: [ {<Имя> <Фамилия> (<возраст>), <Страна> (<Город>)}, {...}, {...}, ...]
 
@@ -81,3 +88,19 @@ console.log(getAdultPeople); // [ 'Ivan Ivanov (20), Russia (Moscow)','Irina Ale
 people[0].first_name = "Petr"; // поменяли имя
 people[0].age = 99; // поменяли возрост
 console.log(people);
+// ---------------
+const user = {
+  first_name: "Nelli",
+  last_name: "Efremyan",
+  age: 27,
+};
+
+// user = [1, 2, 3]; => ошибка
+
+// user.age = 50; // => можно
+
+// user = {
+//   city: 'Yerevan'
+// } => ошибка
+
+console.log(user);
