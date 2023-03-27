@@ -53,8 +53,6 @@ console.log(new_Arr); //  Сформирован массив из активн�
 
 //3. Сформируйте массив из людей, чьи имена начинаются на 'D' (регистр буквы может быть и нижним)
 
-// startsWith()  - method
-
 let arr_name_d = people.filter(
   (elem) => elem.first_name[0] === "D" || elem.first_name[0] === "d"
 ); // получили массив
@@ -62,6 +60,19 @@ let arr_name_d = people.filter(
 let arr_name_D = people.filter(
   (elem) => elem.first_name[0].toUpperCase() === "D"
 );
+
+// startsWith()  - method
+
+const arr_name_d = people.filter((elem) =>
+  elem.first_name.toLowerCase().startsWith("d")
+); // получили массив
+console.log(arr_name_d);
+
+const arr_name_d = people.filter(
+  (elem) => elem.first_name.startsWith("d") || elem.first_name.startsWith("D")
+); // получили массив
+
+console.log(arr_name_d);
 console.log(arr_name_d); // второй метод
 console.log(arr_name_D); // второй метод
 
