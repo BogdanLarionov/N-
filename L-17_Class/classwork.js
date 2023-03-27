@@ -42,6 +42,7 @@ const get_value = (obj, key = "firs_name") => obj[key];
 
 console.log(get_value(user)); // Nelli
 // --------------------------------------------------------------
+// Литеральная аннотация
 
 const person = {
   name: "Ivan",
