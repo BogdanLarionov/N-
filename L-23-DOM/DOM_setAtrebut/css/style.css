@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 250px;
+  border: 1px solid black;
+  background-color: beige;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card p {
+  margin: 10px 0;
+}
+
+.emailText {
+  display: inline;
+  /* блочный элемент ведет себя как строчный */
+  /* display: block; */
+  /* строчный элемент ведет себя как блочный */
+}
+
+.photo {
+  display: block;
+}
