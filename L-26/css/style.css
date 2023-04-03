@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#rootElem {
+  padding: 40px 20px;
+}
+
+.card {
+  padding: 10px;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+.active {
+  background-color: #9c88ff;
+  color: #e1b12c;
+}
