@@ -80,9 +80,35 @@ workers.forEach(
     progressContainer.classList.add("progress-container");
     progressLine.classList.add("progress-line");
     progressValue.classList.add("progress-value");
+    // -----------------------------------------------------------------
 
     // цвет прогресса
     progressLine.style.width = progress + "%";
+    // Тернарный Оператор
+    // progressLine.style.backgroundColor = progress >= 50 ? "green" : "red";
+    // progressLine.style.backgroundColor = progress < 50 ? "red" : "green";
+    // -----------------------------------------------------------------
+
+    progressLine.style.backgroundColor =
+      progress >= 50 ? "green" : progress >= 25 ? "yellow" : "red";
+
+    // -----------------------------------------------------------------
+
+    //  второй способ
+    // progress >= 50
+    //   ? (progressLine.style.backgroundColor = "green")
+    //   : (progressLine.style.backgroundColor = "red");
+    // -----------------------------------------------------------------
+
+    //  третий способ   Условный Оператор
+    // if (progress >= 75) {
+    //   progressLine.style.backgroundColor = "green";
+    // } else if (progress >= 50) {
+    //   progressLine.style.backgroundColor = "yellow";
+    // } else {
+    //   progressLine.style.backgroundColor = "red";
+    // }
+    // -----------------------------------------------------------------
 
     progressContainer.append(progressLine, progressValue);
 
