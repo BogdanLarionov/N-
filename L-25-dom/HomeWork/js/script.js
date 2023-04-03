@@ -48,7 +48,7 @@ const workers = [
 const rootElem = document.querySelector("#root");
 
 workers.forEach(
-  ({ id, first_name, last_name, age, rate, days, salary, photo, progress }) => {
+  ({ id, first_name, last_name, age, rate, days, photo, progress }) => {
     console.log(rootElem);
 
     const divElem = document.createElement("div");
@@ -60,21 +60,31 @@ workers.forEach(
     const rateElem = document.createElement("p");
     const salaryElem = document.createElement("p");
     const imgElem = document.createElement("img");
+    const progressContainer = document.createElement("div");
+    const progressLine = document.createElement("div");
+    const progressValue = document.createElement("p");
 
     idElem.innerText = `Id: ${id}`;
     firstnameElem.innerText = `${first_name} ${last_name}`;
     ageElem.innerText = `Age: ${age}`;
     daysElem.innerText = `Days: ${days}`;
-    rateElem.innerText = `Rate: ${rate} %`;
     salaryElem.innerText = `Salary: ${rate * days}`;
+    progressValue.innerText = `${progress} %`;
+    // progressValue.innerText = progress + '%';
 
     imgElem.src = `${photo}`;
     imgElem.alt = "photo";
 
     divElem.classList.add("card");
     rateElem.classList.add("rate");
+    progressContainer.classList.add("progress-container");
+    progressLine.classList.add("progress-line");
+    progressValue.classList.add("progress-value");
 
-    rateElem.style.backgroundColor = `${rate}` <= 50 ? "red" : "green";
+    // цвет прогресса
+    progressLine.style.width = progress + "%";
+
+    progressContainer.append(progressLine, progressValue);
 
     divElem.append(
       idElem,
@@ -84,7 +94,7 @@ workers.forEach(
       daysElem,
       salaryElem,
       imgElem,
-      rateElem
+      progressContainer
     );
 
     rootElem.append(divElem);

@@ -15,9 +15,9 @@
   margin: 10px;
 }
 
-.card p {
+/* .card p {
   margin: 10px 0;
-}
+} */
 
 #root {
   /* display: flex; */
@@ -27,7 +27,22 @@
   gap: 10px;
 }
 
-.rate {
+.progress-container {
+  position: relative;
   border: 1px solid black;
+  height: 20px;
+  /* отец */
+}
+
+.progress-line {
+  position: absolute;
+  background-color: lightgreen;
+  height: 100%;
+  /* сын */
+}
+
+.progress-value {
+  position: absolute;
   text-align: center;
+  width: 100%;
 }
