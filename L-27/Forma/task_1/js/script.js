@@ -1,5 +1,4 @@
 const formElem = document.querySelector(".form");
-
 const cardsContainer = document.querySelector(".cards_container");
 
 // formElem.addEventListener("submit", (event) => {
