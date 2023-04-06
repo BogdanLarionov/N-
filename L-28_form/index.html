@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- !!!!!!!!!!!!!! type="number" - вводится только числа -->
+    <!-- !!!!!!!!!!!!!! type="text" - вводится только cслова -->
+    <input type="number" name="title" />
+
+    <!-- form -->
+
+    <!-- accept="" куда передаем данные из формы -->
+
+    <!-- get -  данные передаются через url  это метод get-->
+    <!-- post   - передаем параметры в теле запроса это мктод post-->
+
+    <form id="add_product_form" method="post">
+      <input
+        accept="https://example.com/test/server/handler"
+        type="text"
+        placeholder="название"
+        name="title"
+      />
+      <input type="text" placeholder="цена" name="price" />
+      <input type="number" name="title" />
+
+      <button>Add</button>
+    </form>
+
+    <div id="products"></div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
+
+<!-- при отправки формы -->
+<!-- file:///Users/bogdanlarionov/Desktop/TR/JS-Nelli-Povtor/L-28_form/index.html?title=%D0%B2%D0%BF%D0%B2%D0%BF&price=%D0%B2%D0%B0%D0%BF -->
+
+<!-- method="post"  в браузере: inspector, Network, click on the check box Preserve log . Payload увидем пораметры которые мы передали-->
