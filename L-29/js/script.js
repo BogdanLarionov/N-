@@ -1,53 +1,57 @@
-// Создайте форму сбора данных работников с пятью полями: Имя, Фамилия, Email, Ссылка на фото, Прогресс. Поля ввода должны включать "текст-подсказку".
+const workersForm = document.querySelector(".workers_form");
+const cardContainer = document.querySelector(".cards_container");
 
-// Email должен быть кликабельным.
-// Фото должно отображаться.
-
-// Форма должна собирать полученные данные, а затем формировать карточки работников с полученной информацией.
-
-// После отправки необходимо очистить инпуты.
-
-const form = document.querySelector(".form");
-const cardSContainer = document.querySelector(".cards_container");
-
-form.addEventListener("submit", (event) => {
+workersForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const cardElem = document.createElement("div");
+  const { name, lastname, mail, link, progress } = event.target;
+
+  const card = document.createElement("div");
   const nameElem = document.createElement("p");
-  const emailElem = document.createElement("a");
-  const emailTextElem = document.createElement("span");
-  // const emailTextElem = document.createElement("p");
-  //   const emailTextElem = document.createElement("span");
-  const photoElem = document.createElement("img");
+  const lastnameElem = document.createElement("p");
+  const mailElem = document.createElement("span");
+  const mailText = document.createElement("a");
+  const photoLinkElem = document.createElement("img");
+
   const progressContainer = document.createElement("div");
   const progressLine = document.createElement("div");
   const progressValue = document.createElement("p");
 
-  const { firstname, lastname, email, photo, progress } = event.target;
+  nameElem.innerText = `Name: ${name.value} ${lastname.value}`;
+  mailElem.innerText = `Email: `;
+  mailText.innerText = `${mail.value}`;
 
-  nameElem.innerText = `Name: ${firstname.value} ${lastname.value}`;
-  emailTextElem.innerText = "Email: ";
-  emailElem.innerText = email.value;
-  photoElem.alt = "photo";
+  mailText.href = `mailto:${mail.value}`;
+  photoLinkElem.src = `${link.value}`;
+  progressValue.innerText = `${progress.value} %`;
+  photoLinkElem.alt = `photo`;
+  photoLinkElem.classList.add("img");
 
-  emailTextElem.style.display = "inline";
+  progressLine.style.width = progress.value + "%";
 
-  cardElem.classList.add("card");
+  progressLine.style.backgroundColor =
+    progress.value >= 75 ? "green" : progress.value >= 50 ? "yellow" : "red";
 
-  emailElem.href = `mailto:${email}`;
-  // emailElem.setAttribute('href', ())
-  photoElem.src = photo.value;
+  card.classList.add("card");
+  progressContainer.classList.add("progress-container");
+  progressLine.classList.add("progress-line");
+  progressValue.classList.add("progress-value");
 
-  cardElem.append(
+  card.append(
     nameElem,
-    emailTextElem,
-    emailElem,
-    photoElem,
-    progressContainer,
-    progressLine,
-    progressValue
+    lastnameElem,
+    mailElem,
+    mailText,
+    photoLinkElem,
+    progressContainer
   );
+  progressContainer.append(progressLine, progressValue);
 
-  cardSContainer.append(cardElem);
+  cardContainer.append(card);
+
+  name.value = "";
+  lastname.value = "";
+  mail.value = "";
+  link.value = "";
+  progress.value = "";
 });

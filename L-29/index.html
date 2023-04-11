@@ -4,20 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <form class="form">
-      <input type="text" placeholder="First name" name="firstname" />
-      <input type="text" placeholder="Last name" name="lastname" />
-      <input type="text" placeholder="Email" name="email" />
-      <input type="text" placeholder="Photo link" name="photo" />
-      <input type="text" placeholder="Progress" name="progress" />
-      <button>Submit</button>
-    </form>
+    <div class="form_container">
+      <form class="workers_form">
+        <input type="text" placeholder="Name:" name="name" required />
+        <input type="text" placeholder="Lastname:" name="lastname" required />
+        <input type="text" placeholder="Email:" name="mail" required />
+        <input type="text" placeholder="Photo link:" name="link" required />
+        <input type="text" placeholder="Progress:" name="progress" required />
+        <button>Submit</button>
+      </form>
+    </div>
 
     <div class="cards_container"></div>
-    <script src="./js/script.js"></script>
+
+    <!-- <p title="I'm here">hello</p>
+    <a href="" download>Download</a>
+
+
+    required
+
+
+    <marquee behavior="" direction="right">Hello World</marquee> -->
+    <script src="js/script.js"></script>
   </body>
 </html>
