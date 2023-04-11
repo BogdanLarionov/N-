@@ -22,6 +22,8 @@ workersForm.addEventListener("submit", (event) => {
   mailText.innerText = `${mail.value}`;
 
   mailText.href = `mailto:${mail.value}`;
+  mailText.style.textDecoration = "none";
+  mailText.style.color = "black";
   photoLinkElem.src = `${link.value}`;
   progressValue.innerText = `${progress.value} %`;
   photoLinkElem.alt = `photo`;
