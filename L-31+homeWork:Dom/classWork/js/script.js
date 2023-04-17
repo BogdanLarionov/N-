@@ -144,12 +144,21 @@ imgSlider.addEventListener("click", (event) => {
 // HomeWork
 //  1. Cоздать кнопку с размерами 30 на 30 пикселей, при каждом нажатии увеличивать ее на 10 пикселей
 
-const squareBtn = document.querySelector(".square_btn");
+const plusBTN = document.querySelector(".plus_btn");
+let btn_params = 30;
 
-squareBtn.addEventListener("click", () => {
-  squareBtn.stlyle.height = "10px";
+const incr_btn_render = (elem) => {
+  plusBTN.style.width = elem + "px";
+  plusBTN.style.height = elem + "px";
+};
+
+incr_btn_render(btn_params);
+
+plusBTN.addEventListener("click", () => {
+  btn_params += 10;
+  incr_btn_render(btn_params);
 });
-
+// -----------
 //  2. Создать слайдер картинок с кнопками
 
 const imgSliderBtn = document.querySelector(".img_slider_btn");
