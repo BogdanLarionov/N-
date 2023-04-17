@@ -7,3 +7,22 @@
   height: 300px;
   object-fit: cover;
 }
+
+.square_btn {
+  height: 30px;
+  width: 30px;
+}
+
+.img_slider_btn {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* .trigers .button_left,
+.trigers .button_right {
+  display: flex;
+  flex-direction: row;
+  background-color: aquamarine;
+  margin: 0 auto;
+} */

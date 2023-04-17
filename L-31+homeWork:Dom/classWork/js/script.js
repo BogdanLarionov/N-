@@ -140,3 +140,39 @@ let photoIndex = 0;
 imgSlider.addEventListener("click", (event) => {
   event.target.src = photos[photoIndex++ % photos.length];
 });
+
+// HomeWork
+//  1. Cоздать кнопку с размерами 30 на 30 пикселей, при каждом нажатии увеличивать ее на 10 пикселей
+
+const squareBtn = document.querySelector(".square_btn");
+
+squareBtn.addEventListener("click", () => {
+  squareBtn.stlyle.height = "10px";
+});
+
+//  2. Создать слайдер картинок с кнопками
+
+const imgSliderBtn = document.querySelector(".img_slider_btn");
+
+// [left_btn, right_btn] - присвоили класс через деструкторизацию
+const [left_btn, right_btn] = document.querySelectorAll(".trigers button"); // querySelectorAll возарощает колекцию эллементов
+
+const photos_slider = [
+  "https://cdnn21.img.ria.ru/images/153009/29/1530092975_240:0:1680:1440_1920x0_80_0_0_9df118e773d0e9f5c788eabb7b6f2aad.jpg",
+  "https://cdnn21.img.ria.ru/images/153009/29/1530092975_240:0:1680:1440_1920x0_80_0_0_9df118e773d0e9f5c788eabb7b6f2aad.jpg",
+  "https://i.ytimg.com/vi/ViAath1B5WY/maxresdefault.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/African_Elephant_%28Loxodonta_africana%29_male_%2817289351322%29.jpg/1200px-African_Elephant_%28Loxodonta_africana%29_male_%2817289351322%29.jpg",
+];
+
+let photo_Index = 0;
+
+right_btn.addEventListener("click", () => {
+  imgSliderBtn.src = photos_slider[++photo_Index % photos_slider.length];
+});
+
+left_btn.addEventListener("click", () => {
+  if (photo_Index === 0) {
+    photo_Index = photos.length;
+  }
+  imgSliderBtn.src = photos_slider[--photo_Index % photos_slider.length];
+});
