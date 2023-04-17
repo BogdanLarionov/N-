@@ -185,3 +185,41 @@ left_btn.addEventListener("click", () => {
   }
   imgSliderBtn.src = photos_slider[--photo_Index % photos_slider.length];
 });
+
+// --------------------
+
+//Создать генератор бросаемых костей
+
+const gameBTN = document.querySelector(".game_btn");
+const gameResult = document.querySelector(".game_result");
+
+const geme_random = () => Math.round(Math.random() * 5 + 1); // 1 - 6
+
+gameBTN.addEventListener(
+  "click",
+  () => (gameResult.innerText = `${geme_random()} x ${geme_random()}`)
+);
+
+// --------------------
+
+// Создать описанный в форме элемент
+
+const add_form = document.querySelector(".add_form");
+const form_result = document.querySelector(".form_result");
+
+add_form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const { type, content, color } = event.target;
+
+  form_result.innerText = "";
+
+  const elem = document.createElement(type.value);
+  elem.innerText = content.value;
+  elem.style.color = color.value;
+
+  form_result.append(elem);
+
+  type.value = "";
+  content.value = "";
+  color.value = "";
+});
