@@ -1,0 +1,19 @@
+/ HomeWork - делать через forEach()
+// https://jsonplaceholder.typicode.com/todos
+
+https://codebeautify.org/jsonviewer. -- делает код красивым, если он не читаем
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(json => console.log(json))
+
+https://reqres.in/
+
+LIST USERS
+https://reqres.in/api/users?page=2
+
+https://jsonplaceholder.typicode.com/
+users	10 users
+https://jsonplaceholder.typicode.com/users
+
+https://drive.google.com/drive/folders/149OhPp2MguZk7YBJAal40CWC4_Yo9Kez?usp=sharing
