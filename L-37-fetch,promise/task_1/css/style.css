@@ -1,6 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .cards_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-around; */
 }
 
 .card_css {
@@ -18,4 +27,25 @@
 
 .email_elem {
   text-decoration: none;
+}
+
+.avatar {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1048px) {
+  .cards_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .cards_container {
+    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

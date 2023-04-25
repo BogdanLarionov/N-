@@ -7,7 +7,7 @@ fetch("https://reqres.in/api/users/") // отправляем запрос
 
 const render = (data_array) => {
   //json.data => data_array - это аргумент (переменная, может быть любое название)
-  data_array.forEach(({ first_name, email, avatar }) => {
+  data_array.forEach(({ first_name, last_name, email, avatar }) => {
     const card = document.createElement("div");
     card.classList.add("card_css");
     const avatarElem = document.createElement("img");
@@ -18,7 +18,7 @@ const render = (data_array) => {
     // avatarElem.setAttribute("alt", "photo"); // длинная запись
 
     const firstnameElem = document.createElement("p");
-    firstnameElem.innerText = `name: ${first_name}`;
+    firstnameElem.innerText = `name: ${first_name + " " + last_name}`;
 
     const emailText = document.createElement("p");
     emailText.innerText = "Email: ";

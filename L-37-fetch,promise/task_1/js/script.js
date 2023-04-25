@@ -18,12 +18,13 @@ const render = (data_array) => {
     const avatarElem = document.createElement("img");
     avatarElem.src = elem.avatar; // короткая запись
     avatarElem.alt = `photo`; // короткая запись
+    avatarElem.classList.add("avatar");
 
     // avatarElem.setAttribute("src", elem.avatar); // длинная запись
     // avatarElem.setAttribute("alt", "photo"); // длинная запись
 
     const firstnameElem = document.createElement("p");
-    firstnameElem.innerText = `name: ${elem.first_name}`;
+    firstnameElem.innerText = `name: ${elem.first_name + " " + elem.last_name}`;
 
     const emailText = document.createElement("p");
     emailText.innerText = "Email: ";
@@ -51,3 +52,5 @@ const render = (data_array) => {
 //       cardsContainer.append(cardsElem);
 //     });
 //   });
+
+// сделать через маp!
