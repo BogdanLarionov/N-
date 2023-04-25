@@ -1,0 +1,21 @@
+.cards_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card_css {
+  border: solid black 1px;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: blanchedalmond;
+}
+
+.emailText {
+  display: inline;
+}
+
+.email_elem {
+  text-decoration: none;
+}
