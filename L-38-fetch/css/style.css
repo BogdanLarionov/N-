@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+}
+
+#add_form {
+  display: grid;
+  /* grid-auto-flow: column; */
+  gap: 20px;
+  margin: 20px;
+  width: 300px;
+}
+#add_form input {
+  padding: 10px;
+  border: 2px solid black;
+}
+#add_form button {
+  padding: 10px;
+  border: 2px solid black;
+}
+
+#root {
+  display: flex;
+}
+
+.item {
+  margin: 20px;
+  padding: 25px;
+  border: 2px solid black;
+}
+
+.email {
+  text-decoration: none;
+}
