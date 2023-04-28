@@ -78,7 +78,7 @@ workersForm.addEventListener("submit", (event) => {
   link.value = "";
   progress.value = "";
 
-  console.log(cards_info); // выводим что замисалось в массив
+  console.log(cards_info); // выводим что записалось в массив
 
   // render();
   render(cards_info[cards_info.length - 1]);

@@ -5,11 +5,11 @@
 }
 
 .cards_container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* display: flex; */
+  /* display: grid; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  display: flex;
   /* flex-wrap: wrap; */
-  /* justify-content: space-around; */
+  justify-content: space-around;
 }
 
 .card_css {
@@ -49,3 +49,5 @@
     justify-content: center;
   }
 }
+
+/* https: ; //reqres.in/api/users?page=2 */

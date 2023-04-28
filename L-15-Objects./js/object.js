@@ -19,7 +19,7 @@ console.log(object); // ввели обьект{ firstname: 'Nelli', lastname: '
 console.log(object.firstname); // Вывели по ключю то что записанно в firstname -  Nelli
 console.log(`Hello ${object.firstname}! you are ${object.age} years old`); // Hello Nelli! you are 27 years old
 
-// Cпособ через квалратные скобки и ковычки!! Так редко используют
+// Cпособ через квадратные скобки и ковычки!! Так редко используют
 
 // 1. если ключ состоит из двух и более слов
 let user = {

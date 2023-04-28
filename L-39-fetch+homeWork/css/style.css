@@ -1,0 +1,10 @@
+#tasks_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+.task_card {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
