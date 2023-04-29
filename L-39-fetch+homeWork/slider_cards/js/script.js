@@ -11,8 +11,6 @@ const request = (num) => {
     .then((json) => render(json));
 };
 
-request(id_num);
-
 // Внутри функции оброщаться к переменной плохая практика !!!
 const render = ({ title, completed }) => {
   taskContainer.innerText = "";
@@ -49,3 +47,5 @@ right_btn.addEventListener("click", () => {
   }
   request(++id_num);
 });
+
+request(id_num);
