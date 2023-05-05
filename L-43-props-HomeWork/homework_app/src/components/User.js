@@ -1,5 +1,5 @@
 import React from "react";
-
+// диструкторизированные пропсы { id, firstname, lastname, address, salary }
 export default function User({ id, firstname, lastname, address, salary }) {
   const user_style = {
     border: "1px solid black",
