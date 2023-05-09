@@ -1,6 +1,6 @@
-import Worker from "../Worker/Worker";
-import { workers } from "../../data/workers";
 import style from "./App.module.css";
+import Cards from "../Cards/Cards";
+// import { workers } from "../../data/workers";
 
 // const active_vorkers = workers.filter(el => el.in_office === true) - true
 // const active_vorkers = workers.filter(el => el.!in_office ) - не true (false)
@@ -11,11 +11,13 @@ import style from "./App.module.css";
 function App() {
   return (
     <div className={style.main_container}>
-      {workers
+      {/* <Cards workers={workers} /> */}
+      <Cards />
+      {/* {workers
         // .filter((el) => el.in_office)
         .map((el) => (
           <Worker {...el} key={el.id} />
-        ))}
+        ))} */}
       {/* {active_vorkers.map((el) => (
         <Worker {...el} key={el.id} /> */}
     </div>

@@ -12,7 +12,7 @@ export const workers = [
       {
         id: 1,
         task: "Stand up at 10:00 am",
-        done: true,
+        done: false,
       },
       {
         id: 2,
@@ -81,6 +81,21 @@ export const workers = [
         task: "Delete all files to GitHub",
         done: false,
       },
+      {
+        id: 2,
+        task: "Stand up at 10:00 am",
+        done: false,
+      },
+      {
+        id: 3,
+        task: "Pick up document",
+        done: true,
+      },
+      {
+        id: 4,
+        task: "Do homework",
+        done: false,
+      },
     ],
   },
   {
@@ -95,6 +110,21 @@ export const workers = [
         id: 1,
         task: "Add all files to GitHub",
         done: true,
+      },
+      {
+        id: 2,
+        task: "Stand up at 10:00 am",
+        done: false,
+      },
+      {
+        id: 3,
+        task: "Pick up document",
+        done: true,
+      },
+      {
+        id: 4,
+        task: "Do homework",
+        done: false,
       },
     ],
   },
