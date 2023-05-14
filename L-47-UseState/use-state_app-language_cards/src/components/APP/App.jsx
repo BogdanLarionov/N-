@@ -3,6 +3,8 @@ import CardContainer from "../CardsContainer/CardContainer";
 import Triggers from "../Triggers/Triggers";
 import { words } from "../data/words";
 import { useState } from "react";
+import style from "./App.module.css";
+
 function App() {
   const [cards, setCards] = useState(words);
 
@@ -37,6 +39,18 @@ function App() {
     );
   };
 
+  const add_card = (rus_value, eng_value) =>
+    setCards([
+      ...cards,
+      {
+        id: cards.length + 1,
+        // id: Date.now(), // генирирует случайное число
+        eng: eng_value,
+        rus: rus_value,
+        lang: "eng",
+      },
+    ]);
+
   // Метод-2
 
   // const change_lang = (id) => {
@@ -45,9 +59,9 @@ function App() {
   // };
 
   return (
-    <div>
-      <AddPostForm />
-      APP:
+    <div className={style.app_container}>
+      <AddPostForm add_card={add_card} />
+
       <CardContainer wordsArray={cards} change_lang={change_lang} />
       <Triggers chenge_toEng={chenge_toEng} chenge_toRus={chenge_toRus} />
     </div>
